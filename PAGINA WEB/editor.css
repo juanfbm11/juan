@@ -1,0 +1,417 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+}
+
+.nombre-tienda {
+    font-family: 'Times New Roman', sans-serif; 
+    font-size: 36px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1); /* Sombra para darle un estilo de graffiti */
+    font-weight: bold;
+}
+
+.perritos {
+    color: red; 
+}
+
+.callejeros {
+    color: yellow; 
+}
+
+/* Ajusta la sombra de texto  */
+.nombre-tienda span {
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
+    font-weight: bold; /* Letras gruesas */
+}
+
+nav a {
+    font-weight: 600;
+    padding-left: 40px;
+}
+nav a:hover{
+    color: rgb(248, 246, 246);
+}
+
+
+ /*encabezado*/
+header{
+    display: flex;
+    min-height: 60px;
+    background-color: rgb(192, 145, 111);
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 180px;
+    margin-right: 10px;
+    
+}
+@media (max-width:700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+
+
+/*reservas*/
+.reservas-section {
+    background-color:#ffe4c4;
+    padding: 20px;
+    display: grid; 
+    grid-template-columns: 1fr,1fr;
+    gap: 10px;
+}
+.reservas-section  h2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center; 
+    font-size: 40px; 
+    color: rgb(12, 12, 12); 
+    margin-bottom: 20px; 
+    font-weight: bold; 
+   
+}
+.campo {
+    grid-column:1/3;
+    margin-bottom: 20px; /* Espacio entre los campos */
+
+}
+label {
+    width: 40px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    display: aline-block; /* Hacer que el label ocupe toda la línea */
+    font-weight: bold; /* Negrita para los títulos */
+    margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+    margin-left:20px;
+}
+input, select {
+    width: 20%; 
+    padding: 8px; 
+    border: 2px solid #0a0909; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-bottom: 20 px;
+}
+ h3{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center; 
+    font-size: 30px; 
+    color: rgb(12, 12, 12); 
+    margin-bottom: 20px; 
+    font-weight: bold;
+ }
+.mesa-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: auto;
+    grid-template-areas:
+        "mesa1 mesa3 mesa5"
+        "mesa2 mesa4 mesa5";
+    gap: 10px; /* Espacio entre las mesas */
+    margin: 20px ;
+    
+}
+.mesa-container p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px; /* Cambia el tamaño del texto */
+    color: rgb(0, 0, 0); /* Cambia el color del texto */
+    font-weight: bold; /* Negrita */
+    text-align: left; /*  el texto */
+    margin-bottom: 20px; /* Espacio debajo del texto */
+
+}
+.mesa-1 img {    
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+    grid-area: mesa1;
+    width: 147,5px;    
+    height: 313px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    
+ 
+    
+}
+.mesa-2 img {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+    grid-area: mesa2;
+    width: 147,5px;    
+    height: 313px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    
+}
+.mesa-3 img {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+    grid-area: mesa3;
+    width: 147,5px;    
+    height: 313px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    
+    
+}
+.mesa-4 img {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+    grid-area: mesa4;
+    width: 147,5px;    
+    height: 313px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+   
+}
+.mesa-5 img  {
+    margin-bottom: 10px; /* Espacio entre el título y el cuadro */
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    grid-area: mesa5;
+    width: 147,5px;    
+    height: 313px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+.mesa img{
+    width: 50px;    
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 1); /* Sombra ligera para mejor apariencia */
+}
+#ubicacion {
+    background-color:#ffe4c4; /* Fondo */
+   display: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: center;
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 400px; /* Limita el ancho máximo */
+}
+.maps-container {
+    width: 100%; /* Ancho del contenedor del mapa */
+   
+
+}
+.maps-container iframe {
+    width: 100%; /* Asegura que el iframe ocupe el 100% del ancho del contenedor */
+    height: 300px; /* Altura fija para el iframe */
+    border: 3px solid #1d24f3;
+    border-radius: 4px;
+}
+button {
+    background-color: orange;
+    font-size: 16px;
+    color:white;
+    padding: 10px 20px;
+    border: 4px;
+    margin: 20px auto; /* Centrar el botón */
+}
+button:hover {
+    background-color:red;
+}
+
+
+
+
+/*MENU*/
+.menu-section 
+{
+    background-color: rgba(10, 10, 10, 0.865); /* Fondo */
+    padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+
+.menu-section h3 
+{
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 18px;
+    color: white; /* Cambia el color de los títulos del menú */
+    font-weight: bold;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.menu-section h3:hover
+ {
+    color: yellow;
+}
+
+/* Texto en el contenedor de la imagen */
+.menu-section p 
+{
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: white; /* Color inicial del texto */
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.4s ease; /* Transición suave para la aparición */
+}
+
+
+
+.img-container 
+{
+    display: flex; /* Alinea los elementos de izquierda a derecha */
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+/* Estilo para cada contenedor de imagen */
+.img-container > div 
+{
+    position: relative; /* Para que el texto pueda ser absoluto dentro del contenedor */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Imagen con tamaño y ajuste */
+.img-container img 
+{
+    width: 400px;  /* Ancho fijo para todas las imágenes */
+    height: 400px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Ajusta la imagen para que siempre se vea bien */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0px 4px 6px rgba(109, 109, 109, 0.3); /* Sombra ligera */
+    transition: transform 0.3s ease; /* Transición suave para la imagen */
+}
+
+/* Muestra el texto cuando el mouse pasa sobre el contenedor de la imagen */
+.img-container > div:hover p 
+{
+    opacity: 1; /* El texto aparece */
+}
+
+/* Ampliación de la imagen al hacer hover */
+.img-container > div:hover img{
+    transform: scale(1.05); 
+
+}
+
+
+.order-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px auto;
+   
+}
+
+.order-btn:hover {
+    background-color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*pie de pagina*/
+.pie-pagina{
+    
+    background-color: rgb(192, 145, 111);
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.pie-pagina .grupo-1 .box {
+        flex: 1; 
+        margin: 0 20px;   
+}
+
+.pie-pagina .grupo-1 figure{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img{
+    width: 350px;
+    margin-right: 10px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: rgb(12, 12, 12);
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: rgb(12, 12, 12);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color:hwb(0 98% 2%);
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: rgb(245, 245, 245);
+}
+
+.pie-pagina .grupo-2{
+    background-color: rgb(12, 12, 12);
+    padding: 15px 10px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+
+}
+
+@media screen and (max-width:700px){
+    .pie-pagina .grupo-1{
+        width: 90px;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+       padding: 35px 0;
+    }
+    
+    }
